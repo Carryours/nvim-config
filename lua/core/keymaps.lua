@@ -17,7 +17,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- --------------  插件 ---------------- ---
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-
+-- keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>")
 -- -------------- bufferline --------------
 keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")

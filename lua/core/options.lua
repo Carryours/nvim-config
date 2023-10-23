@@ -4,6 +4,7 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 
+
 -- 缩进
 opt.tabstop = 2
 opt.shiftwidth = 2
@@ -11,7 +12,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- 防止包裹
-opt.wrap = false 
+opt.wrap = false
 
 -- 光标行
 opt.cursorline = true
