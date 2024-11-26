@@ -14,10 +14,12 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直新增窗口
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
+
 -- --------------  插件 ---------------- ---
 -- nvim-tree
+-- keymap.set('n', '<Esc>[100~', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
--- keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>")
+keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>")
 -- -------------- bufferline --------------
 keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")
