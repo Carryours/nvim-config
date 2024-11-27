@@ -27,7 +27,7 @@ lspconfig.lua_ls.setup {
     Lua = {
       runtime = {
         -- 告诉语言服务器使用 Lua 5.1（Neovim 是基于 LuaJIT）
-        version = 'LuaJIT',
+      --  version = 'LuaJIT',
       },
       diagnostics = {
         -- 识别全局变量 `vim`
