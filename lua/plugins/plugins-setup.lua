@@ -54,6 +54,8 @@ return require('packer').startup(function(use)
   }
   use 'DaikyXendo/nvim-material-icon' -- 图标
   use 'voldikss/vim-floaterm' -- termainal manager
+  -- install without yarn or npm
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   if packer_bootstrap then
     require('packer').sync()
