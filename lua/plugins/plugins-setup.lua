@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'DaikyXendo/nvim-material-icon' -- 图标
+  use 'voldikss/vim-floaterm' -- termainal manager
 
   if packer_bootstrap then
     require('packer').sync()

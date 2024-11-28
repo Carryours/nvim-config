@@ -13,7 +13,9 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "lua_ls",
     "volar",
-    "ts_ls"
+    "ts_ls",
+    "cssls",
+    "thriftls"
   },
 })
 
@@ -49,6 +51,18 @@ local mason_registry = require('mason-registry')
 
 -- 获取 vue-language-server 的安装路径
 local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()..'/node_modules/@vue/language-server'
+-- lspconfig.ts_ls.setup {
+--   init_options = {
+--     plugins = {
+--       {
+--         name = '@vue/typescript-plugin',
+--         location = vue_language_server_path,
+--         languages = { 'vue' },
+--       }
+--     },
+--   },
+--   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
+-- }
 lspconfig.ts_ls.setup {
   init_options = {
     plugins = {
@@ -56,19 +70,24 @@ lspconfig.ts_ls.setup {
         name = '@vue/typescript-plugin',
         location = vue_language_server_path,
         languages = { 'vue' },
-      }
+      },
     },
   },
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
-}
-
--- Volar
-lspconfig.volar.setup = {
-
   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+}
+-- Volar
+lspconfig.volar.setup {
   init_options = {
     vue = {
       hybridMode = false,
     },
   },
 }
+
+
+-- css
+lspconfig.cssls.setup {}
+
+
+-- thrift
+lspconfig.thriftls.setup {}
