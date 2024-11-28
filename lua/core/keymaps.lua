@@ -23,3 +23,6 @@ keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>")
 -- -------------- bufferline --------------
 keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")
+
+
+-- gitsigns

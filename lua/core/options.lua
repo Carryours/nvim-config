@@ -1,9 +1,8 @@
 local opt = vim.opt
 
 -- 行号
-opt.relativenumber = true
+opt.relativenumber = false
 opt.number = true
-
 
 -- 缩进
 opt.tabstop = 2
@@ -35,4 +34,14 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 -- Lua
-vim.cmd[[colorscheme tokyonight-moon]]
+-- vim.cmd[[colorscheme tokyonight-moon]]
+
+opt.background = "dark" --  light or dark 
+
+vim.cmd[[colorscheme gruvbox]]
+vim.g.gruvbox_contrast_dark = 'hard'  -- 选项可以是 'soft', 'medium', 'hard'
+vim.g.gruvbox_invert_selection = true  -- 选中时反转颜色
+
+-- 设置背景为透明
+vim.cmd([[ hi Normal guibg=NONE ctermbg=NONE ]])  -- 适用于 GUI 版本
+vim.cmd([[ hi NonText guibg=NONE ctermbg=NONE ]]) -- 隐藏字符的背景

@@ -14,7 +14,8 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'folke/tokyonight.nvim' -- 主题
+  -- use 'folke/tokyonight.nvim' -- 主题
+  use 'gruvbox-community/gruvbox' -- gruvbox主题
   use {
     'nvim-lualine/lualine.nvim', --状态栏
     requires = { 'kyazdani42/nvim-web-devicons', opt = true } -- 状态栏图标
@@ -51,6 +52,8 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', -- tag = '0.1.8',  -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'DaikyXendo/nvim-material-icon' -- 图标
+
   if packer_bootstrap then
     require('packer').sync()
   end
