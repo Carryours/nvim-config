@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap
-
+local api = vim.api
 -- ------------- 视觉模式----------- ---
 -- 单行或多行移动
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -25,4 +25,18 @@ keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")
 
 
+keymap.set("n", "<leader>q", ":<C-U>bprevious <bar> bdelete #<CR>")
+keymap.set("n", "<leader>wq", ":w <CR> :<C-U>bprevious <bar> bdelete #<CR>")
 -- gitsigns
+
+
+keymap.set("n", "<leader>gg", ":LazyGit<CR>")
+
+
+keymap.set("n", "<leader>tt", ":FloatermToggle<CR>")
+
+
+
+api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true })

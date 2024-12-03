@@ -47,16 +47,42 @@ return require('packer').startup(function(use)
 
   use "akinsho/bufferline.nvim" -- buffer分割线
   use "lewis6991/gitsigns.nvim" -- 左则git提示
+  -- lazygit  
+  -- use({
+  --     "kdheepak/lazygit.nvim",
+  --     -- optional for floating window border decoration
+  --     requires = {
+  --         "nvim-lua/plenary.nvim",
+  --     },
+  -- })
+  --
+  use({
+      "kdheepak/lazygit.nvim",
+      requires = {
+          "nvim-telescope/telescope.nvim",
+          "nvim-lua/plenary.nvim",
+      },
+      config = function()
+          require("telescope").load_extension("lazygit")
+      end,
+  })
 
   use {
     'nvim-telescope/telescope.nvim', -- tag = '0.1.8',  -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'DaikyXendo/nvim-material-icon' -- 图标
-  use 'voldikss/vim-floaterm' -- termainal manager
+  -- use 'voldikss/vim-floaterm' -- termainal manager
+  use {
+    "akinsho/toggleterm.nvim", tag = '*', 
+    config = function()
+      require("toggleterm").setup()
+    end
+  }
   -- install without yarn or npm
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
+  -- use 'famiu/bufdelete.nvim'  -- 关闭缓冲区
   if packer_bootstrap then
     require('packer').sync()
   end

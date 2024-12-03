@@ -12,4 +12,12 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+  git = {
+    ignore = false
+  },
+  actions = {
+    open_file = {
+      quit_on_open = false
+    }
+  }
 })
