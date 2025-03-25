@@ -56,6 +56,8 @@ return require('packer').startup(function(use)
   --     },
   -- })
   --
+
+  use "echasnovski/mini.move" -- 用opt+方向键移动行
   use({
       "kdheepak/lazygit.nvim",
       requires = {
