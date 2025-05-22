@@ -50,7 +50,7 @@ vim.g.gruvbox_invert_selection = true  -- 选中时反转颜色
 vim.cmd([[ hi Normal guibg=NONE ctermbg=NONE ]])  -- 适用于 GUI 版本
 vim.cmd([[ hi NonText guibg=NONE ctermbg=NONE ]]) -- 隐藏字符的背景
 
-vim.wo.foldlevel = 3
+-- vim.wo.foldlevel = 3
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
