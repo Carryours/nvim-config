@@ -42,17 +42,15 @@ opt.background = "dark" --  light or dark
 
 -- opt.hidden = true
 
-vim.cmd[[colorscheme gruvbox]]
-vim.g.gruvbox_contrast_dark = 'hard'  -- 选项可以是 'soft', 'medium', 'hard'
-vim.g.gruvbox_invert_selection = true  -- 选中时反转颜色
+
 
 -- 设置背景为透明
 vim.cmd([[ hi Normal guibg=NONE ctermbg=NONE ]])  -- 适用于 GUI 版本
 vim.cmd([[ hi NonText guibg=NONE ctermbg=NONE ]]) -- 隐藏字符的背景
 
 -- vim.wo.foldlevel = 3
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+-- vim.wo.foldmethod = 'expr'
+-- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
 -- vim.wo.fillchars='eob: '
 
