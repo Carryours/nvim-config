@@ -25,15 +25,14 @@ keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")
 
 
-keymap.set("n", "<leader>q", ":<C-U>bprevious <bar> bdelete #<CR>")
-keymap.set("n", "<leader>wq", ":w <CR> :<C-U>bprevious <bar> bdelete #<CR>")
+keymap.set("n", "<leader>q", ":Bdelete<CR>", { noremap = true, silent = true, desc = "Close buffer and keep layout" })
 -- gitsigns
 
 
 keymap.set("n", "<leader>gg", ":LazyGit<CR>")
 
 
-keymap.set("n", "<leader>tt", ":FloatermToggle<CR>")
+keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { noremap = true, silent = true, desc = "Toggle terminal" })
 
 
 

@@ -3,6 +3,13 @@ return {
   build = ":MasonUpdate",
   config = function()
     require("mason").setup({
+      ensure_installed = {
+        -- formatters
+        "stylua",
+        "prettier",
+        "gofmt",
+        "goimports",
+      },
       ui = {
           icons = {
               package_installed = "✓",
